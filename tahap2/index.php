@@ -13,16 +13,19 @@ $anime = query("SELECT * FROM anime");
   <title>Daftar Anime</title>
 </head>
 <body>
-  <h3>Daftar Anime</h3>
+  <h2>Daftar Anime</h2>
+
+  <a href="add.php">Add</a>
+  <br><br>
 
   <table border="1" cellpadding="10" cellspacing="0">
     <tr>
       <th>#</th>
-      <th>Gambar</th>
-      <th>Judul</th>
+      <th>Image</th>
+      <th>Title</th>
       <th>Studio</th>
       <th>Genre</th>
-      <th>Aksi</th>
+      <th>Action</th>
     </tr>
 
     <?php $i=1; ?>
