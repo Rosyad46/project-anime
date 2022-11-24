@@ -23,5 +23,16 @@ function add($data) {
 	$query 	= "INSERT INTO anime VALUES('','$gambar','$judul','$studio','$genre')";
 	mysqli_query($conn, $query);
 
-	return $conn;
+	echo mysqli_errno($conn);
+
+	return mysqli_affected_rows($conn);
+}
+
+function delete($id) {
+	global $conn;
+
+	$query = "DELETE FROM anime WHERE id = $id";
+	mysqli_query($conn, $query);
+	
+	return mysqli_affected_rows($conn);
 }
