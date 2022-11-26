@@ -37,7 +37,7 @@ $anime = query("SELECT * FROM anime");
       <td><?= $anm["studio"]; ?></td>
       <td><?= $anm["genre"]; ?></td>
       <td colspan="2">
-        <a href="">Update</a>
+        <a href="update.php?id=<?= $anm["id"]; ?>">Update</a>
         <a href="delete.php?id=<?= $anm["id"]; ?>" onclick="return confirm('Are you sure want delete this data?')">Delete</a>
       </td>
     </tr>

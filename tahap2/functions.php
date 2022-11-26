@@ -36,3 +36,26 @@ function delete($id) {
 	
 	return mysqli_affected_rows($conn);
 }
+
+function update($data) {
+	global $conn;
+
+	$id = $data["id"];
+	$judul = htmlspecialchars($data["judul"]);
+	$studio = htmlspecialchars($data["studio"]);
+	$genre = htmlspecialchars($data["genre"]);
+
+	$query = "UPDATE anime SET 
+						judul = '$judul', 
+						studio = '$studio', 
+						genre = '$genre'
+						WHERE id = '$id'";
+	mysqli_query($conn, $query);
+
+	echo mysqli_errno($conn);
+
+	return mysqli_affected_rows($conn);
+}
+
+
+?>
