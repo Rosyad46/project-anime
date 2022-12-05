@@ -9,14 +9,14 @@ if ( isset($_POST['update']) ) {
     echo "
      <script>
       alert('Updated Succed');
-      document.location.href = 'index.php';
      </script>";
+     header("Location: index.php");
   } else {
     echo "
       <script>
         alert('Updated Failed');
-        
       </script>";
+      header("Location: index.php");
   }
 }
 ?>
@@ -43,8 +43,12 @@ if ( isset($_POST['update']) ) {
 
     <table>
     <tr>
+			<input type="hidden" name="gambarLama" value="<?= $anm['gambar']; ?>"">
+		</tr>
+    <tr>
       <td><label for="gambar">
       Image</td>
+      <img src="img/<?= $anm['gambar']; ?>" width="300">
       <td><input type="file" name="gambar" id="gambar"></td>
       </label>
     </tr>

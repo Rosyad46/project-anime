@@ -32,7 +32,7 @@ $anime = query("SELECT * FROM anime");
     <?php foreach ($anime as $anm): ?>
     <tr>
       <td><?= $i++; ?></td>
-      <td><img src="img/Kakashi.jpg" width="100"></td>
+      <td><img src="img/<?= $anm["gambar"]; ?>" width="100"></td>
       <td><?= $anm["judul"]; ?></td>
       <td><?= $anm["studio"]; ?></td>
       <td><?= $anm["genre"]; ?></td>
